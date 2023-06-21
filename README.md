@@ -1,5 +1,3 @@
-# Lista-de-compras
-é uma lista de compras simples, que pode: adicionar, remover ou listar os itens de dentro da lista
 #lista de compras
 print('Lista de compras')
 print('-' * 10)
@@ -50,6 +48,10 @@ while True:
             apagar_produto = int(input('Digite o número do produto que deseja remover da lista: '))
             lista_compras.pop(apagar_produto)
             os.system('cls')
-    except:
-        print('Não foi possível deletar o item, pois ele não existe. Favor, digitar um item válido.')
+    
+    except ValueError:
+        print('Por favor, digite apenas número inteiro.')
+
+    except IndexError:
+        print('Esse número não existe na lista. Digite um número válido.')
     
